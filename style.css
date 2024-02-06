@@ -603,7 +603,7 @@ footer .column > a:hover {
     color: purple;
 }
 
-@media (width < 900px_) {
+@media (width < 900px) {
     .nav-links{
         display: none;
 
@@ -687,253 +687,101 @@ footer .column > a:hover {
     to {scale: 1; opacity:1}
 }
 
-/* CCHAT GPT */
 
-@media only screen and (max-width: 900px) {
-  nav .nav-links {
-    display: none;
-  }
 
-  header {
-    grid-template-columns: 1fr;
+@media (width < 600px) {
+  .nav-links{
+    font-size: 20px;
+  } 
+  .wrapper .static-txt {
+    font-size: 35px;
   }
-
-  header .image {
-    grid-area: 1/1/2/2;
+  .dynamic-txts li {
+    font-size: 35px;
+    top: -16px;
   }
-
-  .skills {
-    grid-template-columns: 1fr;
+  .dynamic-txts li span::after {
+    bottom: 0px;
+    left: 0;
+    content: "";
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background: #18181b; 
+    border-left: 1px solid purple;
+    animation: typing 1.5s steps(23) infinite;
   }
-
-  footer {
-    grid-template-columns: 1fr;
-  }
+  @keyframes slide {
+    100% {
+        top: -378px;
+    }
+}
 }
 
-@media only screen and (max-width: 600px) {
-  header .image::before {
-    display: none;
+@media (width < 537px) {
+  .nav-links{
+    font-size: 20px;
+  } 
+  .wrapper .static-txt {
+    font-size: 35px;
+    white-space: nowrap;
+  }
+  .dynamic-txts li {
+    width: 100%;
+    font-size: 35px;
+    top: -16px;
+    white-space: nowrap;
   }
 
-  .skills {
-    grid-template-columns: 1fr;
+  .dynamic-txts li span::after {
+    bottom: 0px;
+    left: 0;
+    content: "";
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background: #18181b; 
+    border-left: 2px solid purple;
+    animation: typing 1.5 steps(23) infinite;
   }
-
-  footer {
-    grid-template-columns: 1fr;
-  }
+  @keyframes slide {
+    100% {
+        top: -378px;
+    }
+}
 }
 
-/* Additional mobile-friendly styles */
-body {
-    font-size: 16px;
-  }
-  
-  .container {
-    padding: 2rem;
-  }
-  
-  nav {
-    padding: 1rem;
-  }
-  
-  .nav-links {
-    flex-direction: row;
-    gap: 1rem;
-    align-items: flex-start;
-  }
-  
-  .link a::after {
-    width: 0; /* Reset the width for mobile */
-  }
-  
-  /* Media queries for mobile responsiveness */
-@media only screen and (max-width: 900px) {
-    /* Existing media queries for general layout adjustments */
-  
-    .features {
-      grid-template-columns: 1fr;
-    }
-  
-    .scroller {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 100%;
-      overflow-x: scroll;
-      white-space: nowrap;
-    }
-  
-    .scroller__inner {
-      display: flex;
-      flex-wrap: nowrap;
-    }
-  
-    .school .cards {
-      padding: 2rem;
-    }
-  
-    .certifications {
-      padding: 2rem;
-    }
-  }
-  
-  @media only screen and (max-width: 600px) {
-    /* Additional media queries for smaller screens */
-  
-    .features,
-    .scroller,
-    .school .cards,
-    .certifications {
-      padding: 1rem;
-    }
-  }
-  
-  /* Additional mobile-friendly styles */
-  /* Add more styles as needed for better mobile experience */
-  
 
-  @media only screen and (max-width: 900px) {
-    /* Existing media queries for general layout adjustments */
-  
-    .features,
-    .scroller,
-    .school .cards,
-    .certifications,
-    .role {
-      padding: 1rem;
-    }
-  
-    .role {
-      display: block;
-      text-align: center;
-    }
-  
-    .wrapper {
-      display: block;
-    }
-  
-    .dynamic-txts {
-      margin-left: 0;
-      text-align: center;
-      height: auto;
-    }
-  
-    .dynamic-txts li {
-      text-align: center;
-      animation: none; /* Disable the animation for mobile */
-    }
-  
-    .dynamic-txts li span::after {
-      display: none; /* Hide the typing animation for mobile */
-    }
-  }
-  
-  @media only screen and (max-width: 600px) {
-    /* Additional media queries for smaller screens */
-  }
 
-  /* Media queries for mobile responsiveness */
-@media only screen and (max-width: 900px) {
-    /* Existing media queries for general layout adjustments */
-  
-    .features,
-    .scroller,
-    .school .cards,
-    .certifications,
-    .role {
-      padding: 1rem;
-    }
-  
-    .role {
-      display: block;
-      text-align: center;
-    }
-  
-    .wrapper {
-      display: block;
-    }
-  
-    .dynamic-txts {
-      margin-left: 0;
-      text-align: center;
-      height: auto;
-    }
-  
-    .dynamic-txts li {
-      text-align: center;
-      animation: none; /* Disable the animation for mobile */
-    }
-  
-    .dynamic-txts li span::after {
-      display: none; /* Hide the typing animation for mobile */
-    }
-  
-    header .content {
-      text-align: center;
-    }
-  
-    .lottie {
-      margin: auto;
-      text-align: center;
-    }
-  
-    .headshot img {
-      max-width: 100%;
-      border-radius: 50%;
-    }
-  
-    .features,
-    .scroller,
-    .school .cards,
-    .certifications {
-      padding: 1rem;
-    }
-  
-    .scroller {
-      overflow-x: auto;
-      white-space: nowrap;
-    }
-  
-    .scroller__inner {
-      display: flex;
-      flex-wrap: nowrap;
-    }
-  
-    .school .cards {
-      padding: 1rem;
-    }
-  
-    .certifications {
-      padding: 1rem;
+
+/*@media (max-width: 320px) {
+  .nav-links{
+    font-size: 18px;
+  } 
+  .wrapper .static-txt {
+    margin-left: 30%;
+    font-size: 35px;
+    white-space: nowrap;
+  }
+  .dynamic-txts li {
+    font-size: 35px;
+    white-space: nowrap;
+    top: -16px;
+  }
+  .dynamic-txts li span::after {
+    left: 0;
+    content: "";
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background: #18181b; 
+    border-left: 2px solid purple;
+    animation: typing 1.5s steps(23) infinite;
+  }
+  @keyframes slide {
+    100% {
+        top: -376.2px;
     }
   }
-  
-  @media only screen and (max-width: 600px) {
-    /* Additional media queries for smaller screens */
-  
-    .features,
-    .scroller,
-    .school .cards,
-    .certifications {
-      padding: 0.5rem;
-    }
-  
-    header .content h1 {
-      font-size: 2rem;
-      line-height: 3rem;
-    }
-  
-    .features {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .scroller {
-      max-width: 100%;
-    }
-  
-    .school .cards,
-    .certifications {
-      padding: 0.5rem;
-    }
-  }
+}
+*/
